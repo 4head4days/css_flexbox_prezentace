@@ -41,9 +41,24 @@ color: #333333
  ## Komponenty a osy flexboxu
  - flex container - parent element, který v sobě drží všechny flex item, při použití `display` z CSS může být definován buď jako `flex` či `inline-flex`
  - flex item - každý child element flex container se považuje za flex item
- - axes - každý flex box má dvě osy: main a cross
- ![w:800 h:400](flexbox_explain.png)
- 
+ - axes - každý flex box má dvě osy: main a cross, main je podle rozložení buď horizontální nebo vertikální a cross osa je na ní vždy kolmá
+![w:800 h:400](flexbox_explain.png)
+
+ ---
+
+ ## Osy flexboxu
+  - main osa je definována `flex-direction`
+  ![w:700 h:250](osa_main_row.png)
+  ![w:700 h:250](osa_main_col.png)
+
+---
+
+ ## Start a end line
+ - flexbox je flexibilní v ohledu start a end line, nabízí možnost změny směru začátku
+ - toto se aplikuje na obě osy, tzn. v obou případech je start cross osy na vrchu flex containeru a end na spodku
+ - pokud by jsme chtěli pracovat s vertikálním psaním tak můžeme přes vlastnost `writing-mode` definovat `vertical-rl` pro psaní zprava doleva nebo `vertical-lr` pro opak - užitečné zvlášť pro asijské jazyky
+ - v případě `vertical-lr` bude směřovat main osy shora dolů (směr toku textu) a cross osa zleva doprava
+
  ---
 
  ## Důležité vlastnosti
